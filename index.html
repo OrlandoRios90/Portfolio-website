@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Orlando R. Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/202d2f6110.js" crossorigin="anonymous"></script>
+
+    </head>
+<body>
+    <nav>
+        <img src="images/logo.png" alt="logo" class="logo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="header">
+        <div class="container">
+            <!--nav used to be here, moved it out to create space-->
+            <div class="header-text">
+                <p>UX/UI Designer</p>
+                <h1>Hi, I'm <span>Orlando</span> from Florida</h1>
+            </div>
+        </div>
+    </div>
+    <!--about secion-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores obcaecati libero eligendi vitae
+                        ullam illum praesentium itaque iure consectetur perspiciatis, at, quod eos voluptates dignissimos
+                        illo sapiente esse. Cum quaerat distinctio impedit, ipsam officiis quia molestiae numquam aut
+                        excepturi aliquid eum? Amet optio placeat provident incidunt porro. Fuga distinctio possimus
+                        corporis quam aliquid animi, molestias amet pariatur aspernatur itaque accusamus provident laborum
+                        dolor sunt ipsa nobis voluptatibus dignissimos? Quis libero ducimus quo dolore. Voluptatum tempore
+                        asperiores in quos iure quam quas adipisci, repudiandae doloribus, cum quis pariatur. Itaque
+                        consequuntur odio officiis, non dolorem quaerat porro? Qui veritatis neque dolore corrupti?</p>
+                
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UX/UI</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Web App Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022-Current</span><br>Marketing Coordinator @ Pop Of Marketing</li>
+                            <li><span>2015-2022</span><br>Senior Lab Analyst @ Cardinal Health</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Coursera - 2023</span><br>Meta Front End Developer Certification</li>
+                            <li><span>University of Central Florida</span><br>B.S. Molecular Biology and Microbiology</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--services section-->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, tempora.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UX/UI Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, tempora.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, tempora.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--portfolio section-->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" >
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, maiores.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" >
+                    <div class="layer">
+                        <h3>Second App</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, maiores.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" >
+                    <div class="layer">
+                        <h3>Third App</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, maiores.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>  
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <script>
+        let tabLinks = document.getElementsByClassName("tab-links");
+        let tabContents = document.getElementsByClassName("tab-contents");
+
+        function openTab(tabName) {
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove("active-link");
+            }
+
+            for (tabContent of tabContents) {
+                tabContent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+
+    </script>
+
+
+</body>
+</html>
