@@ -12,13 +12,15 @@
 <body>
     <nav>
         <img src="images/logo.png" alt="logo" class="logo">
-        <ul>
+        <ul id="sidemenu">
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-x" onclick="closeMenu()"></i>
         </ul>
+        <i class="fa-solid fa-bars" onclick="openMenu()"></i>
     </nav>
     <div id="header">
         <div class="container">
@@ -134,6 +136,34 @@
             <a href="#" class="btn">See more</a>
         </div>
     </div>
+    <!--contact section-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
+                    <p><i class="fa-solid fa-phone"></i> (888) 954-5934</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/OrlandoRios90/"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="https://www.linkedin.com/in/orlando-rios-68ba4990/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/Orlando Rios Resume.pdf" download class="btn btn2">Download My Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" id="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2023 Orlando Rios</p>
+        </div>
+    </div>
 
     <script>
         let tabLinks = document.getElementsByClassName("tab-links");
@@ -153,7 +183,18 @@
         }
 
     </script>
+        
+    <script>
+        let sidemenu = document.getElementById("sidemenu");
 
+        function openMenu() {
+            sidemenu.style.right = "0";
+        }
+        function closeMenu() {
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
 
 </body>
 </html>
