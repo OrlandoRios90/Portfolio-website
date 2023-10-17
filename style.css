@@ -8,11 +8,10 @@
 body {
     background: #000000;
     color: white;
-
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }
 
 #header {
@@ -140,7 +139,7 @@ nav ul li a:hover::after {
 }
 
 .tab-links.active-link::after {
-    width: 70%;
+    width: 100%;
 }
 
 .tab-contents ul li {

@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+    font-family: 'Markazi Text', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* begin generic rules */
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    background: #51504c;
+}
+
+li {
+    padding: 15px;
+}
+
+/* end generic rules */
+
+/* container rules */
+
+.body-container {
+    margin-left: 15vw;
+    margin-right: 5vw;
+}
+
+.games-container {
+    margin-top: 6vh;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-items:center;
+}
+
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #393935;
+    margin-top: 1.4rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.left-container {
+    width: 65%;
+}
+
+.live-container {
+    background: #393935;
+    margin-top: 2.6rem;
+    margin-right: 7rem;
+    height: 200px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+/* end container rules */
+
+/* sections */
+
+.sidebar {
+    position: fixed;
+    width: 10vw;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    background: #393935;
+    color: white;
+}
+
+.header {
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sub-menu-logo, .sub-menu-play, .sub-menu-puzzles, .sub-menu-learn {
+    position: absolute;
+    top: 0;
+    display: none;
+    width: 20vw;
+    height: 100%;
+    z-index: 2;
+    background-color: #2e2d2b;
+    color: white;
+    margin-left: 10vw;
+}
+
+.sub-menu-play, .sub-menu-puzzles, .sub-menu-learn {
+    margin-left: 8.8vw;
+}
+
+.write-a-note {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    height: 4rem;
+}
+
+.daily-games {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 3rem;
+    margin-top: 2.6rem;
+    background: #393935;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.play-boards {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin-left: 50px;
+}
+
+/* end sections */
+
+/* effects */
+
+.sub-menu-logo li:hover {
+    background: #232220;
+    cursor: pointer
+}
+
+.logo:hover .sub-menu-logo {
+    display: block;
+    cursor: pointer
+}
+
+.puzzles:hover .sub-menu-puzzles {
+    display: block;
+    cursor: pointer
+}
+
+.play:hover .sub-menu-play {
+    display: block;
+    cursor: pointer
+}
+
+.learn:hover .sub-menu-learn {
+    display: block;
+    cursor: pointer
+}
+
+.sidebar li:hover {
+    background: #2d2c2a;
+    cursor: pointer
+}
+
+#logo:hover, button {
+    cursor: pointer;
+}
+
+/*end effects */
+
+/* individual targeted items */
+
+#logo {
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.username {
+    color: white;
+    display: inline-flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.header-icons, .play, .puzzles, .learn, .watch, .news, .social, .more, .free-trial {
+    display: inline-flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#play-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 4vh;
+}
+
+.play-options{
+    display: flex;
+    flex-direction: row; 
+}
+
+.live-header h4 {
+    color: white;
+    padding: 10px;
+}
+
+.live-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.play-card p {
+    font-size: small;
+}
+
+.play-boards-header {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding-bottom: 15px;
+    align-items: center;
+}
+
+/* end individual targeted items */
+
+/* images and graphics */
+
+.games-container img {
+    width: 220px;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.line-1 {
+    height: 1px;
+    background: lightgray;
+    opacity: 50%;
+    width: 95%;
+    align-self: center;
+}
+
+/* end images and graphics */
+
+/* buttons */
+
+.write-a-note button {
+    padding: 10px;
+    color: lightgray;
+    background: #51504c;
+    border-radius: 5px;
+}
+
+.play-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.play-buttons button {
+    text-align: left;
+    padding: 25px 60px 25px 10px;
+    background: #393935;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 2px -2px #2d2c2a;
+}
+
+.board-button {
+    text-align: center;
+    width: 100%;
+    height: 4rem;
+    background: #393935;
+    color: white;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 2px -2px #2d2c2a;
+}
+
+/* end buttons */
