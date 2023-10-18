@@ -58,7 +58,7 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Front-End</span><br>ReactJS and vanilla Javascript</li>
+                            <li><span>Front-End Apps</span><br>ReactJS and vanilla Javascript</li>
                             <li><span>Web Development</span><br>HTML/CSS</li>
                             <li><span>Developer</span><br>Git and GitHub</li>
                         </ul>
@@ -135,7 +135,7 @@
                     </div>
                 </div>  
             </div>
-            <a href="#" class="btn">See more</a>
+            <a href="https://github.com/OrlandoRios90/" class="btn" target="_blank">See more</a>
         </div>
     </div>
     <!--contact section-->
@@ -153,12 +153,13 @@
                     <a href="images/Orlando Rios Resume.pdf" download class="btn btn2">Download My Resume</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" id="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -196,6 +197,24 @@
             sidemenu.style.right = "-200px";
         }
 
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwAqk6w-E47qcyWt5gGZ6xxCg5GYNO07nkrRoMoCwdpVDRkqimOnWRVFlowg_ZZ01uEyw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully!";
+                    setTimeout(() => {
+                        msg.innerHTML = ""
+                    }, 9000);
+                    form.reset();
+                })
+                .catch(error => msg.innerHTML = "Error sending message")
+        })
     </script>
 
 </body>
